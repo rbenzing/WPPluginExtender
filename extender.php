@@ -1,13 +1,6 @@
 <?php
 
 /**
- * The plugin bootstrap file
- *
- * This file is read by WordPress to generate the plugin information in the plugin
- * admin area. This file also includes all of the dependencies used by the plugin,
- * registers the activation and deactivation functions, and defines a function
- * that starts the plugin.
- *
  * @link              russellbenzing.com
  * @since             1.0.0
  * @package           Extender
@@ -15,7 +8,7 @@
  * @wordpress-plugin
  * Plugin Name:       Extender
  * Plugin URI:        http://github.com/rbenzing/WPPluginExtender
- * Description:       This is a short description of what the plugin does. It's displayed in the WordPress admin area.
+ * Description:       This is plugin used in a workshop on WordPress plugin development.
  * Version:           1.0.0
  * Author:            Russell Benzing
  * Author URI:        russellbenzing.com
@@ -35,7 +28,7 @@ if ( ! defined( 'WPINC' ) ) {
  * Start at version 1.0.0 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define( 'PLUGIN_NAME_VERSION', '1.0.0' );
+define( 'EXTENDER_VERSION', '1.0.0' );
 
 /**
  * The code that runs during plugin activation.
