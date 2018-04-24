@@ -60,9 +60,103 @@ class Extender_Admin {
 	 *
 	 * @uses "admin_menu"
 	 */
-	public function add_page() {
+	public function extender_add_page() {
 		
-		add_menu_page(__( 'Admin Area', 'extender' ), __( 'Admin Area', 'extender' ), 'manage_options', 'extender', array( $this, 'render_admin' ) );
+		add_menu_page(__( 'Extender Admin', 'extender' ), __( 'Extender Area', 'extender' ), 'manage_options', 'extender', array( $this, 'render_admin' ) );
+	}
+	
+	/**
+	 * Add Admin submenu settings fields & sections
+	 *
+	 * @since 1.0.0
+	 *
+	 * @uses "admin_menu"
+	 */
+	function extender_settings_init() { 
+		register_setting( 'extender', 'extender_settings' );
+		add_settings_section(
+			'extender_admin_section', 
+			__( 'My Admin Section Title', 'extender' ), 
+			array($this, 'extender_settings_section_callback'), 
+			'extender'
+		);
+	
+		add_settings_field( 
+			'extender_text_field_1', 
+			__( 'Settings Field', 'extender' ), 
+			array($this, 'extender_text_field_1_render'), 
+			'extender', 
+			'extender_admin_section' 
+		);
+	
+		add_settings_field( 
+			'extender_textarea_field_2', 
+			__( 'Settings Field', 'extender' ), 
+			array($this, 'extender_textarea_field_2_render'), 
+			'extender', 
+			'extender_admin_section' 
+		);
+	
+		add_settings_field( 
+			'extender_select_field_3', 
+			__( 'Settings Field', 'extender' ), 
+			array($this, 'extender_select_field_3_render'), 
+			'extender', 
+			'extender_admin_section' 
+		);
+	
+		add_settings_field( 
+			'extender_radio_field_4', 
+			__( 'Settings field description', 'extender' ), 
+			array($this, 'extender_radio_field_4_render'), 
+			'extender', 
+			'extender_admin_section'
+		);
+	}
+	
+	function extender_text_field_1_render() { 
+	
+		$options = get_option( 'extender_settings' );
+		?>
+		<input type='text' name='extender_settings[extender_text_field_1]' value='<?php echo esc_attr( $options['extender_text_field_1'] ); ?>'>
+		<?php
+	}
+	
+	function extender_textarea_field_2_render() { 
+	
+		$options = get_option( 'extender_settings' );
+		?>
+		<textarea cols='40' rows='5' name='extender_settings[extender_textarea_field_2]'> 
+			<?php echo esc_textarea( $options['extender_textarea_field_2'] ); ?>
+	 	</textarea>
+		<?php
+	}
+	
+	function extender_select_field_3_render() { 
+	
+		$options = get_option( 'extender_settings' );
+		?>
+		<select name='extender_settings[extender_select_field_3]'>
+			<option value='1' <?php selected( $options['extender_select_field_3'], 1 ); ?>>Option 1</option>
+			<option value='2' <?php selected( $options['extender_select_field_3'], 2 ); ?>>Option 2</option>
+			<option value='3' <?php selected( $options['extender_select_field_3'], 3 ); ?>>Option 3</option>
+			<option value='4' <?php selected( $options['extender_select_field_3'], 4 ); ?>>Option 4</option>
+		</select>
+		<?php
+	}
+	
+	function extender_radio_field_4_render() { 
+	
+		$options = get_option( 'extender_settings' );
+		?>
+		<input type='radio' name='extender_settings[extender_radio_field_4]' <?php checked( $options['extender_radio_field_4'], 1 ); ?> value='1'> Yes
+		<input type='radio' name='extender_settings[extender_radio_field_4]' <?php checked( $options['extender_radio_field_4'], 0 ); ?> value='0'> No
+		<?php
+	}
+	
+	function extender_settings_section_callback() { 
+	
+		echo __( 'This is the section description', 'extender' );
 	}
 	
 	/**
@@ -72,7 +166,19 @@ class Extender_Admin {
 	 */
 	public function render_admin() {
 		
-		echo 'Put your form here!';
+		?>
+		<form action='options.php' method='post' class="extender-admin">
+	
+			<h2>Extender</h2>
+	
+			<?php
+			settings_fields( 'extender' );
+			do_settings_sections( 'extender' );
+			submit_button();
+			?>
+	
+		</form>
+		<?php
 	}
 
 	/**
@@ -126,7 +232,7 @@ class Extender_Admin {
 	 *
 	 * @since    1.0.0
 	 */
-	public function create_gallery() {
+	public function extender_create_gallery() {
  
 	    register_post_type( 'gallery',
 	        array(
