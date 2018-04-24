@@ -1,0 +1,4 @@
+PSR-5 compliant - https://make.wordpress.org/core/handbook/best-practices/inline-documentation-standards/php/
+
+
+1. WordPress Plugin Boilerplate - http://wppb.io/

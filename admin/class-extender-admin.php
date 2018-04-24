@@ -51,7 +51,28 @@ class Extender_Admin {
 
 		$this->plugin_name = $plugin_name;
 		$this->version = $version;
-
+	}
+	
+	/**
+	 * Add Admin submenu page
+	 *
+	 * @since 1.0.0
+	 *
+	 * @uses "admin_menu"
+	 */
+	public function add_page() {
+		
+		add_menu_page(__( 'Admin Area', 'extender' ), __( 'Admin Area', 'extender' ), 'manage_options', 'extender', array( $this, 'render_admin' ) );
+	}
+	
+	/**
+	 * Render plugin admin page
+	 *
+	 * @since    1.0.0
+	 */
+	public function render_admin() {
+		
+		echo 'Put your form here!';
 	}
 
 	/**
@@ -98,6 +119,26 @@ class Extender_Admin {
 
 		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/extender-admin.js', array( 'jquery' ), $this->version, false );
 
+	}
+	
+	/**
+	 * Register a custom post type for Video/Photo Gallery
+	 *
+	 * @since    1.0.0
+	 */
+	public function create_gallery() {
+ 
+	    register_post_type( 'gallery',
+	        array(
+	            'labels' => array(
+	                'name' => __( 'Gallery' ),
+	                'singular_name' => __( 'Gallery' )
+	            ),
+	            'public' => true,
+	            'has_archive' => false,
+	            'rewrite' => array('slug' => 'gallery'),
+	        )
+	    );
 	}
 
 }
