@@ -1,5 +1,15 @@
-PSR-5 compliant - https://make.wordpress.org/core/handbook/best-practices/inline-documentation-standards/php/
+1. PSR-5 Compliance - https://make.wordpress.org/core/handbook/best-practices/inline-documentation-standards/php/
+The following is a list of what should be documented in WordPress files:
 
+Functions and class methods
+Classes
+Class members (including properties and constants)
+Requires and includes
+Hooks (actions and filters)
+Inline comments
+File headers
+Constants
 
-1. WordPress Plugin Boilerplate - http://wppb.io/
-2. Admin Page Class - https://github.com/bainternet/Admin-Page-Class/
+2. WordPress Plugin Boilerplate - http://wppb.io/
+3. Admin Page Class - https://github.com/bainternet/Admin-Page-Class/
+
