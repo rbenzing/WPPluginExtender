@@ -2,3 +2,4 @@ PSR-5 compliant - https://make.wordpress.org/core/handbook/best-practices/inline
 
 
 1. WordPress Plugin Boilerplate - http://wppb.io/
+2. Admin Page Class - https://github.com/bainternet/Admin-Page-Class/
