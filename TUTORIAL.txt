@@ -5,16 +5,31 @@ WordPress Development Tutorial
 Object-Oriented Programming - a programming technique that uses a grouping (class) of related methods (functions) to define a computer program or part of a computer program.
 Functional Programming - using the internal functions provided by WordPress to hook into their platform.
 
-2. PSR-5 Compliance - https://make.wordpress.org/core/handbook/best-practices/inline-documentation-standards/php/
-The following is a list of what should be documented in WordPress files:
+2. PSR-1 & PSR-2 Compliance - USE INLINE DOCUMENTATION
 
+/**
+ * Summary.
+ *
+ * Description.
+ *
+ * @since x.x.x
+ * @depreciated x.x.x Use new_function_name()
+ * @see Function/method/class relied on
+ * @link URL
+ * @global type $varname Description.
+ * @global type $varname Description.
+ *
+ * @param type $var Description.
+ * @param type $var Optional. Description. Default.
+ * @return type Description.
+ */
+ 
+The following is a list of what should be documented in WordPress files:
 Functions and class methods
 Classes
 Class members (including properties and constants)
 Requires and includes
 Hooks (actions and filters)
-Inline comments
-File headers
 Constants
 
 3. Plugin Header Requirements
@@ -35,7 +50,7 @@ Domain Path: The domain path let WordPress know where to find the translations. 
 - Why use Licensing? it's required if you want your plugin in the WordPress plugin repository
 - Place license in your plugin head after your header comments
 
-4. Plugin executible is plugin-name.php not index.php which contains "<?php // Silence is golden" so to prevent directory browsing
+4. Folder Structure / Plugin Name executible is plugin-name.php not index.php which contains "<?php // Silence is golden" so to prevent directory browsing
 
 5. ABSPATH - (WordPress Absolute Path) can be used to add to the top of every plugin file to check for proper instantiation. This prevents direct access to your plugin files from via outside scripts or crawlers.
 if(!defined('ABSPATH')){ die; } or defined('ABSPATH') or die('Hack attempt');
@@ -60,7 +75,7 @@ Use casing: Pascal Case (ExampleClass), Camel Case (exampleClass), Underscore (e
 
 - PHP recommends PSR-1 (PHP Standard Recommendation 1) and PSR-2
 
-5. Activation / Deactivation / Uninstall Hooks
+7. Activation / Deactivation / Uninstall Hooks
 Activation and deactivation hooks provide ways to perform actions when plugins are activated or deactivated.
 
 On activation, plugins can run a routine to add rewrite rules, add custom database tables, or set default option values.
@@ -70,7 +85,7 @@ register_deactivation_hook( __FILE__, 'pluginprefix_callback_function_to_run' );
 On uninstall, plugins can clean up themselves from the system such as any plugin options and/or settings specific to to the plugin, and/or other database entities such as tables 
 register_uninstall_hook(__FILE__, 'pluginprefix_function_to_run');
 
-6. Security and Validation - Please keep in mind that your code may be running across hundreds, perhaps even millions, of websites, so security is of the utmost importance.
+8. Security and Validation - Please keep in mind that your code may be running across hundreds, perhaps even millions, of websites, so security is of the utmost importance.
 Make sure your plugin follows the following best practices:
 
 Check user capabilities - If your plugin allows users to submit data—be it on the Admin or the Public side—it should check for User Capabilities.
@@ -79,11 +94,17 @@ Sanitize input - Securing input is the process of sanitizing (cleaning, filterin
 Sanitize output - Securing output is the process of escaping output data. Escaping means stripping out unwanted data, like malformed HTML or script tags.
 Nonces - Nonces are generated numbers used to verify origin and intent of requests for security purposes. Each nonce can only be used once. If your plugin allows users to submit data; be it on the Admin or the Public side; you have to make sure that the user is who they say they are.
 
-7. 
+9. Creating a custom post type gallery 
+
+10. Extending the custom post type gallery with custom content blocks and meta data
+
+
+
+
 
 Helpful Links:
 
-Basic Coding Standard - https://www.php-fig.org/psr/psr-1/
+PHP Standards Recommendations - https://www.php-fig.org/psr/
 
 WordPress Licensing & the GPL - https://developer.wordpress.org/themes/getting-started/wordpress-licensing-the-gpl/
 
