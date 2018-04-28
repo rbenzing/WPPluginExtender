@@ -85,6 +85,8 @@ register_deactivation_hook( __FILE__, 'pluginprefix_callback_function_to_run' );
 On uninstall, plugins can clean up themselves from the system such as any plugin options and/or settings specific to to the plugin, and/or other database entities such as tables 
 register_uninstall_hook(__FILE__, 'pluginprefix_function_to_run');
 
+
+
 8. Security and Validation - Please keep in mind that your code may be running across hundreds, perhaps even millions, of websites, so security is of the utmost importance.
 Make sure your plugin follows the following best practices:
 
@@ -103,6 +105,8 @@ Nonces - Nonces are generated numbers used to verify origin and intent of reques
 
 
 Helpful Links:
+
+Dashicons for Custom Post Types - https://developer.wordpress.org/resource/dashicons/
 
 PHP Standards Recommendations - https://www.php-fig.org/psr/
 
