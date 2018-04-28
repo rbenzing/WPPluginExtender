@@ -1,5 +1,6 @@
 WordPress Development Tutorial
 
+0. One Rule to Rule them All - One cardinal rule in WordPress development, it’s this: Don’t touch WordPress core
 
 1. Two ways to create a plugin.
 Object-Oriented Programming - a programming technique that uses a grouping (class) of related methods (functions) to define a computer program or part of a computer program.
