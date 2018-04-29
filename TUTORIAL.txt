@@ -6,7 +6,7 @@ WordPress Development Tutorial
 Object-Oriented Programming - a programming technique that uses a grouping (class) of related methods (functions) to define a computer program or part of a computer program.
 Functional Programming - using the internal functions provided by WordPress to hook into their platform.
 
-2. PSR-1 & PSR-2 Compliance - USE INLINE DOCUMENTATION
+2. PHP Scripting Conventions (PHP Standard Recommendation) - PSR-1 & PSR-2 Compliance - USE INLINE DOCUMENTATION
 
 /**
  * Summary.
@@ -70,11 +70,17 @@ if(!function_exists('my_custom_function_name')){
 if(!class_exists('ClassName')){
   // run code
 }
+if(!method_exists($classvar, 'MethodName')) {
+  // run code
+}
 
 - PHP Visibility Methods:
  Public - Can be accessed everywhere
  Protected - Can be accessed within the class or extensions of the class
  Private -  Can be accessed only within the class
+ 
+- Class Visibility Methods:
+  final - do not allow extension of the class to other classes
 
 7. Unique Class Name or Function Names - use a unique name as to not conflict with any other plugins.
 Use casing: Pascal Case (ExampleClass), Camel Case (exampleClass), Underscore (example_class)
@@ -91,7 +97,7 @@ register_deactivation_hook( __FILE__, 'pluginprefix_callback_function_to_run' );
 On uninstall, plugins can clean up themselves from the system such as any plugin options and/or settings specific to to the plugin, and/or other database entities such as tables 
 register_uninstall_hook(__FILE__, 'pluginprefix_function_to_run');
 
-
+ - Use Constants for plugin directory paths
 
 8. Security and Validation - Please keep in mind that your code may be running across hundreds, perhaps even millions, of websites, so security is of the utmost importance.
 Make sure your plugin follows the following best practices:
@@ -106,11 +112,13 @@ Nonces - Nonces are generated numbers used to verify origin and intent of reques
 
 10. Extending the custom post type gallery with custom content blocks and meta data
 
-
+11. Using Composer Autoload and Learning Namespaces
 
 
 
 Helpful Links:
+
+Composer - https://getcomposer.org/download/
 
 Dashicons for Custom Post Types - https://developer.wordpress.org/resource/dashicons/
 
