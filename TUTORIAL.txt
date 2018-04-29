@@ -71,6 +71,11 @@ if(!class_exists('ClassName')){
   // run code
 }
 
+- PHP Visibility Methods:
+ Public - Can be accessed everywhere
+ Protected - Can be accessed within the class or extensions of the class
+ Private -  Can be accessed only within the class
+
 7. Unique Class Name or Function Names - use a unique name as to not conflict with any other plugins.
 Use casing: Pascal Case (ExampleClass), Camel Case (exampleClass), Underscore (example_class)
 
