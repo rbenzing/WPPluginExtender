@@ -36,17 +36,19 @@ Constants
 3. Plugin Header Requirements
 The follow is a list of header comments:
 
-Plugin Name: (required) The name of your plugin, which will be displayed in the Plugins list in the WordPress Admin.
-Plugin URI: The home page of the plugin, which should be a unique URL, preferably on your own website. This must be unique to your plugin. You cannot use a WordPress.org URL here.
-Description: A short description of the plugin, as displayed in the Plugins section in the WordPress Admin. Keep this description to fewer than 140 characters.
-Version: The current version number of the plugin, such as 1.0 or 1.0.3.
-Author: The name of the plugin author. Multiple authors may be listed using commas.
-Author URI: The author’s website or profile on another website, such as WordPress.org.
-License: The short name (slug) of the plugin’s license (e.g. GPL2, Apache, MIT). More information about licensing can be found in the WordPress.org guidelines.
-License URI: A link to the full text of the license (e.g. https://www.gnu.org/licenses/gpl-2.0.html).
-Text Domain: The gettext text domain of the plugin. More information can be found in the Text Domain section of the How to Internationalize your Plugin page.
-Domain Path: The domain path let WordPress know where to find the translations. More information can be found in the Domain Path section of the How to Internationalize your Plugin page.
-
+/**
+ * Plugin Name: (required) The name of your plugin, which will be displayed in the Plugins list in the WordPress Admin.
+ * Plugin URI: The home page of the plugin, which should be a unique URL, preferably on your own website. This must be unique to your plugin. You cannot use a WordPress.org URL here.
+ * Description: A short description of the plugin, as displayed in the Plugins section in the WordPress Admin. Keep this description to fewer than 140 characters.
+ * Version: The current version number of the plugin, such as 1.0 or 1.0.3.
+ * Author: The name of the plugin author. Multiple authors may be listed using commas.
+ * Author URI: The author’s website or profile on another website, such as WordPress.org.
+ * License: The short name (slug) of the plugin’s license (e.g. GPL2, Apache, MIT). More information about licensing can be found in the WordPress.org guidelines.
+ * License URI: A link to the full text of the license (e.g. https://www.gnu.org/licenses/gpl-2.0.html).
+ * Text Domain: The gettext text domain of the plugin. More information can be found in the Text Domain section of the How to Internationalize your Plugin page.
+ * Domain Path: The domain path let WordPress know where to find the translations. More information can be found in the Domain Path section of the How to Internationalize your Plugin page.
+ */
+ 
 - Use php comment blocks /* Variable: Value */ not double slashes // Variable: Value
 - Why use Licensing? it's required if you want your plugin in the WordPress plugin repository
 - Place license in your plugin head after your header comments
@@ -117,6 +119,8 @@ Nonces - Nonces are generated numbers used to verify origin and intent of reques
 
 
 Helpful Links:
+
+Gutenberg Migration Guide - https://github.com/danielbachhuber/gutenberg-migration-guide
 
 Composer - https://getcomposer.org/download/
 
