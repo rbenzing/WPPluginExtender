@@ -151,7 +151,7 @@ mkdir my-local-dir
 svn co https://plugins.svn.wordpress.org/your-plugin-name my-local-dir
 cd my-local-dir/
 svn add trunk/*
-svn ci -m "Adding first version of my plugin" --username your_username --password your_password
+svn ci -m "first commit" --username your_username --password your_password
 
 SVN Update Existing Code:
 
@@ -159,7 +159,7 @@ cd my-local-dir/
 svn up
 svn stat (see whats changed)
 svn diff (see whats changed in code)
-svn ci -m "fancy new feature: now you can foo *and* bar at the same time" --username your_username --password your_password
+svn ci -m "update msg" --username your_username --password your_password
 
 --------
 
