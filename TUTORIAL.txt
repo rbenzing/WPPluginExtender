@@ -128,6 +128,8 @@ Dashicons for Custom Post Types - https://developer.wordpress.org/resource/dashi
 
 PHP Standards Recommendations - https://www.php-fig.org/psr/
 
+ReadMe.txt Validator - https://wordpress.org/plugins/developers/readme-validator/
+
 WordPress Licensing & the GPL - https://developer.wordpress.org/themes/getting-started/wordpress-licensing-the-gpl/
 
 Object Oriented Programming Tutorial - https://code.tutsplus.com/tutorials/two-ways-to-develop-wordpress-plugins-object-oriented-programming--wp-27716
