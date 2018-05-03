@@ -112,7 +112,11 @@ Nonces - Nonces are generated numbers used to verify origin and intent of reques
 
 9. Creating a custom post type gallery with custom content blocks and meta data
 
-10. Uploading your plugin to the WordPress Plugin Directory. WordPress won’t accept plugins that do ‘nothing,’ are illegal, or encourage bad behavior. This includes black hat SEO spamming, content spinners, hate-plugins, and so on.
+10. Publishing your plugin to the WordPress Plugin Directory. 
+
+A plugins readme.txt file is the key file to making your plugin publish correctly. The readme.txt creates the description of your plugin and is what determines the version of your plugin that will be available to the public.
+
+WordPress won’t accept plugins that do ‘nothing,’ are illegal, or encourage bad behavior. This includes black hat SEO spamming, content spinners, hate-plugins, and so on.
 
 SUBMISSION STEPS
 1. Sign up for an account on WordPress.org.
@@ -128,6 +132,7 @@ THINGS TO LOOK OUT FOR:
 - Calling external files unnecessarily
 - “Powered By” links
 - Phoning home
+- Semantic Versioning
 
 SVN Access:
 Login is username (not email) and password
@@ -163,6 +168,8 @@ Helpful Links:
 Gutenberg Migration Guide - https://github.com/danielbachhuber/gutenberg-migration-guide
 
 Composer - https://getcomposer.org/download/
+
+WordPress Code Reference - https://developer.wordpress.org/reference/
 
 Dashicons for Custom Post Types - https://developer.wordpress.org/resource/dashicons/
 
