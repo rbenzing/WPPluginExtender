@@ -110,13 +110,53 @@ Sanitize input - Securing input is the process of sanitizing (cleaning, filterin
 Sanitize output - Securing output is the process of escaping output data. Escaping means stripping out unwanted data, like malformed HTML or script tags.
 Nonces - Nonces are generated numbers used to verify origin and intent of requests for security purposes. Each nonce can only be used once. If your plugin allows users to submit data; be it on the Admin or the Public side; you have to make sure that the user is who they say they are.
 
-9. Creating a custom post type gallery 
+9. Creating a custom post type gallery with custom content blocks and meta data
 
-10. Extending the custom post type gallery with custom content blocks and meta data
+10. Uploading your plugin to the WordPress Plugin Directory. WordPress won’t accept plugins that do ‘nothing,’ are illegal, or encourage bad behavior. This includes black hat SEO spamming, content spinners, hate-plugins, and so on.
 
-11. Using Composer Autoload and Learning Namespaces
+SUBMISSION STEPS
+1. Sign up for an account on WordPress.org.
+2. Submit your plugin for review.
+3. After your plugin is manually reviewed, it will either be approved or you will be emailed and asked to provide more information and/or make corrections.
+4. Once approved, you’ll be given access to a Subversion Repository where you’ll store your plugin.
+5. Shortly after you upload your plugin (and a readme file!) to that repository, it will be automatically displayed in the plugins browser.
 
+THINGS TO LOOK OUT FOR:
+- Not including a readme.txt file when acting as a service
+- Not testing the plugin with WP_DEBUG
+- Including custom versions of packaged JavaScript libraries
+- Calling external files unnecessarily
+- “Powered By” links
+- Phoning home
 
+SVN Access:
+Login is username (not email) and password
+
+There are four directories created by default in all SVN repositories:
+/assets/ - Use assets for screenshots, plugin headers, and plugin icons.
+/branches/ - The /branches directory is a place that you can use to store branches of the plugin. Perhaps versions that are in development, or test code, etc. 
+/tags/ - The /tags directory is where you can put versions of the plugin at some specific point in time. e.g. /tags/1.0
+/trunk/ - The /trunk directory is where your plugin code should live.
+
+Console Steps:
+
+SVN Checkout & Add Code:
+
+mkdir my-local-dir
+svn co https://plugins.svn.wordpress.org/your-plugin-name my-local-dir
+cd my-local-dir/
+svn add trunk/*
+svn ci -m "Adding first version of my plugin" --username your_username --password your_password
+
+SVN Update Existing Code:
+
+cd my-local-dir/
+svn up
+svn stat (see whats changed)
+svn diff (see whats changed in code)
+svn ci -m "fancy new feature: now you can foo *and* bar at the same time" --username your_username --password your_password
+
+--------
 
 Helpful Links:
 
@@ -130,7 +170,11 @@ PHP Standards Recommendations - https://www.php-fig.org/psr/
 
 ReadMe.txt Validator - https://wordpress.org/plugins/developers/readme-validator/
 
+How To Use SVN - https://developer.wordpress.org/plugins/wordpress-org/how-to-use-subversion/
+
 WordPress Licensing & the GPL - https://developer.wordpress.org/themes/getting-started/wordpress-licensing-the-gpl/
+
+Detailed Plugin Guidelines - https://developer.wordpress.org/plugins/wordpress-org/detailed-plugin-guidelines/
 
 Object Oriented Programming Tutorial - https://code.tutsplus.com/tutorials/two-ways-to-develop-wordpress-plugins-object-oriented-programming--wp-27716
 
