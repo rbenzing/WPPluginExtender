@@ -6,7 +6,7 @@ WordPress Development Tutorial
 Object-Oriented Programming - a programming technique that uses a grouping (class) of related methods (functions) to define a computer program or part of a computer program.
 Functional Programming - using the internal functions provided by WordPress to hook into their platform.
 
-2. PHP Scripting Conventions (PHP Standard Recommendation) - PSR-1 & PSR-2 Compliance - USE INLINE DOCUMENTATION
+2. PHP Scripting Conventions (PHP Standard Recommendation) - PSR-1 & PSR-2 Compliance
 
 /**
  * Summary.
