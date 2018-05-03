@@ -179,6 +179,8 @@ ReadMe.txt Validator - https://wordpress.org/plugins/developers/readme-validator
 
 How To Use SVN - https://developer.wordpress.org/plugins/wordpress-org/how-to-use-subversion/
 
+WordPress Roles & Capabilities - https://codex.wordpress.org/Roles_and_Capabilities
+
 WordPress Licensing & the GPL - https://developer.wordpress.org/themes/getting-started/wordpress-licensing-the-gpl/
 
 Detailed Plugin Guidelines - https://developer.wordpress.org/plugins/wordpress-org/detailed-plugin-guidelines/
@@ -190,3 +192,5 @@ WordPress Plugin Security - https://developer.wordpress.org/plugins/security/
 WordPress Plugin Boilerplate - http://wppb.io/
 
 Admin Page Class - https://github.com/bainternet/Admin-Page-Class/
+
+WordPress Debug Bar - https://wpadverts.com/blog/wordpress-debug-bar-plugin-blackbox/
